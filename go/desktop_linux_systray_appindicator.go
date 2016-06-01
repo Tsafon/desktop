@@ -79,9 +79,17 @@ func (os *DesktopSysTrayAppIndicator) update() {
 }
 
 func (os *DesktopSysTrayAppIndicator) close() {
-	os.FallbackVar.Close(os.App)
-	os.IconSet.Close()
-	os.DesktopSysTrayGtk.close()
+	if os.FallbackVar != nil {
+		os.FallbackVar.Close(os.App)
+		os.FallbackVar = nil
+	}
+	if os.IconSet != nil {
+		os.IconSet.Close()
+		os.IconSet = nil
+	}
+	if os.DesktopSysTrayGtk != nil {
+		os.DesktopSysTrayGtk.close()
+	}
 }
 
 func (os *DesktopSysTrayAppIndicator) UpdateIcon() {
