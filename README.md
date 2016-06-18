@@ -14,6 +14,7 @@ Go check [Java Docs](java/) or [Go Docs](go/)
   - [X] Cross platform SysTray Icon
   - [X] Cross platform Open Browser URL
   - [ ] Cross platform Browser Pop SysTray Window
+    - Java/Go Service Can emulate web server, web pages can be opened by browser or mobile device. If we emulate mobile browser client, we can show systray icon dropdown browser mini window. As a result developers need to create only two versions of web site - desktop && mobile and systray icon goin just reuse mobile version.
   - [ ] Cross platform Power Events (control reboot, logout, suspend)
   - [ ] Register URL handlers (open an application from a browser)
   - [ ] Sound and Volume control
